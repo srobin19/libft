@@ -6,7 +6,7 @@
 /*   By: srobin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/11 17:05:52 by srobin            #+#    #+#             */
-/*   Updated: 2019/10/04 18:42:23 by srobin           ###   ########.fr       */
+/*   Updated: 2019/10/04 21:18:18 by srobin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ char				*ft_strjoin3(char const *s1, char const *s2, char const *s3);
 void				ft_tabfree(char **tab);
 int					get_next_line(const int fd, char **line);
 char				**ft_split_whitespaces(char *str);
+size_t				ft_tablen(char **tab);
 
 
 typedef struct		s_list
