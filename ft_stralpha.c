@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_tab.c                                     :+:      :+:    :+:   */
+/*   ft_stralpha.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srobin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/03 17:11:05 by srobin            #+#    #+#             */
-/*   Updated: 2019/10/07 22:55:25 by srobin           ###   ########.fr       */
+/*   Created: 2019/10/05 20:05:25 by srobin            #+#    #+#             */
+/*   Updated: 2019/10/05 20:06:35 by srobin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_print_tab(char **tab)
+int				ft_stralpha(char *str)
 {
-	size_t	i;
+	int			i;
 
-	if (!tab || !*tab)
-		return ;
+	if (!str)
+		return (0);
 	i = 0;
-	while (tab[i])
+	while (str[i])
 	{
-		ft_putstr(tab[i]);
-		ft_putchar('\n');
+		if (!ft_isalnum(str[i]))
+			return (0);
 		i++;
 	}
+	return (1);
 }

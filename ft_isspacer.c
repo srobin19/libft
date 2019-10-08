@@ -1,28 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_tab.c                                     :+:      :+:    :+:   */
+/*   ft_isspacer.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srobin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/03 17:11:05 by srobin            #+#    #+#             */
-/*   Updated: 2019/10/07 22:55:25 by srobin           ###   ########.fr       */
+/*   Created: 2019/10/07 23:29:17 by srobin            #+#    #+#             */
+/*   Updated: 2019/10/07 23:29:49 by srobin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_print_tab(char **tab)
+int			ft_isspacer(int c)
 {
-	size_t	i;
-
-	if (!tab || !*tab)
-		return ;
-	i = 0;
-	while (tab[i])
-	{
-		ft_putstr(tab[i]);
-		ft_putchar('\n');
-		i++;
-	}
+	return (c == ' ' || c == '\t' || c == '\n');
 }

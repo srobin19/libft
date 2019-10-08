@@ -6,20 +6,20 @@
 /*   By: srobin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/22 00:42:53 by srobin            #+#    #+#             */
-/*   Updated: 2019/10/04 18:40:56 by srobin           ###   ########.fr       */
+/*   Updated: 2019/10/07 23:31:30 by srobin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-# define I var[0]
-# define J var[1]
-# define S var[2]
+#define I var[0]
+#define J var[1]
+#define S var[2]
 
-static int		ft_nb_words(char *str)
+int				ft_nb_words(char *str)
 {
-	int 		i;
-	int 		words;
+	int			i;
+	int			words;
 
 	i = 1;
 	words = 0;
@@ -37,7 +37,7 @@ static int		ft_nb_words(char *str)
 
 static int		ft_length(char *str, int i)
 {
-	int			 k;
+	int			k;
 
 	k = 0;
 	while (str[i] != ' ' && str[i] != '\t' && str[i] != '\n' && str[i] != '\0')

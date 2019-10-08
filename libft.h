@@ -6,7 +6,7 @@
 /*   By: srobin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/11 17:05:52 by srobin            #+#    #+#             */
-/*   Updated: 2019/10/04 21:18:18 by srobin           ###   ########.fr       */
+/*   Updated: 2019/10/07 23:37:26 by srobin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,12 +71,16 @@ void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_print_tab(char **tab);
 void				s_cpy(char *dest, size_t *i, char const *s);
-char				*ft_strjoin3(char const *s1, char const *s2, char const *s3);
-void				ft_tabfree(char **tab);
+char				*ft_strjoin3(char const *s1,
+					char const *s2, char const *s3);
+void				ft_tabfree(char ***tab);
 int					get_next_line(const int fd, char **line);
 char				**ft_split_whitespaces(char *str);
 size_t				ft_tablen(char **tab);
-
+int					ft_stralpha(char *str);
+char				**ft_tabstradd(char **tab, char *str);
+int					ft_isspacer(int c);
+int					ft_nb_words(char *str);
 
 typedef struct		s_list
 {

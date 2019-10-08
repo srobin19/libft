@@ -6,23 +6,20 @@
 /*   By: srobin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/04 18:16:31 by srobin            #+#    #+#             */
-/*   Updated: 2019/10/04 18:22:03 by srobin           ###   ########.fr       */
+/*   Updated: 2019/10/07 16:58:03 by srobin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_tabfree(char **tab)
+void		ft_tabfree(char ***tab)
 {
-	char	**roam;
+	int i;
 
-	if (!tab)
+	i = -1;
+	if (!*tab)
 		return ;
-	roam = tab;
-	while (*roam)
-	{
-		free(*roam);
-		roam++;
-	}
-	free(tab);
+	while ((*tab)[++i])
+		ft_strdel(&(*tab)[i]);
+	free(*tab);
 }

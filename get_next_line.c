@@ -6,7 +6,7 @@
 /*   By: srobin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/23 14:33:46 by srobin            #+#    #+#             */
-/*   Updated: 2019/04/24 17:15:40 by srobin           ###   ########.fr       */
+/*   Updated: 2019/10/07 23:23:17 by srobin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,8 @@ static char		*cut_to_next_line(char **str, int i, int fd)
 	char	*tmp;
 
 	tmp = str[fd];
-	str[fd] = ft_strdup(&str[fd][i + !!str[fd][i]]);
+	if (!(str[fd] = ft_strdup(&str[fd][i + !!str[fd][i]])))
+		exit(EXIT_FAILURE);
 	free(tmp);
 	return (str[fd]);
 }

@@ -6,7 +6,7 @@
 #    By: srobin <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/19 16:06:57 by srobin            #+#    #+#              #
-#    Updated: 2019/10/04 21:17:56 by srobin           ###   ########.fr        #
+#    Updated: 2019/10/07 23:30:14 by srobin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,11 +27,11 @@ SOURCE_C = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 		   ft_strstr.c ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c \
 		   ft_lstnew.c ft_lstadd.c ft_lstiter.c get_next_line.c \
 		   ft_print_tab.c ft_strjoin3.c ft_tabfree.c ft_split_whitespaces.c \
-		   ft_tablen.c
+		   ft_tablen.c ft_stralpha.c ft_tabstradd.c ft_isspacer.c
 
 SOURCE_O = $(SOURCE_C:.c=.o)
 
-FLAGS = -Wall -Werror -Wextra
+FLAGS = -Wall  -Wextra
 
 all: $(NAME)
 	
